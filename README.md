@@ -1,3 +1,10 @@
+[![version](https://img.shields.io/npm/v/pdf-parse.svg)](https://www.npmjs.org/package/pdf-parse2)
+[![downloads](https://img.shields.io/npm/dt/pdf-parse2.svg)](https://www.npmjs.org/package/pdf-parse2)
+![license](https://img.shields.io/npm/l/pdf-parse2)
+[![node](https://img.shields.io/node/v/pdf-parse2.svg)](https://nodejs.org/)
+![type](https://img.shields.io/npm/types/pdf-parse2)
+![size](https://img.shields.io/npm/unpacked-size/pdf-parse2)
+
 # PDF Parse
 
 A pure JavaScript, cross-platform module designed for extracting text from PDF files using [pdf.js](https://mozilla.github.io/pdf.js/).
