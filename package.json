@@ -1,0 +1,53 @@
+{
+  "name": "pdf-parse2",
+  "version": "1.0.0",
+  "description": "A pure JavaScript, cross-platform module designed for extracting text from PDF files.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "author": {
+    "name": "necm1",
+    "email": "necmi.m.hasan@outlook.de",
+    "url": "https://necm1.dev"
+  },
+  "type": "module",
+  "keywords": [
+    "pdf-parse",
+    "pdf-crawler",
+    "xpdf",
+    "pdf.js",
+    "pdfreader",
+    "pdf2json",
+    "j-pdfjson",
+    "pdf-parser",
+    "pdf-extract",
+    "pdf-extractor",
+    "pdf-to-text",
+    "pdf-text-extract",
+    "pdfjs",
+    "server side PDF parsing",
+    "pdf metadata"
+  ],
+  "repository": "https://github.com/necm1/pdf-parse.git",
+  "bugs": {
+    "url": "https://github.com/necm1/pdf-parse/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "https://github.com/necm1/pdf-parse",
+  "devDependencies": {
+    "@types/node": "^20.11.27",
+    "@types/pdfjs-dist": "^2.10.378",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.0.379"
+  }
+}
