@@ -1,1 +1,0 @@
-{"version":3,"file":"pdf-options.interface.d.ts","sourceRoot":"","sources":["../../src/interface/pdf-options.interface.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,YAAY,CAAC;AAE1C,MAAM,WAAW,UAAU;IACzB,UAAU,EAAE,CAAC,QAAQ,EAAE,YAAY,KAAK,OAAO,CAAC,MAAM,CAAC,CAAC;IACxD,QAAQ,EAAE,MAAM,CAAC;CAClB"}

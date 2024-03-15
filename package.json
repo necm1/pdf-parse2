@@ -2,9 +2,18 @@
   "name": "pdf-parse2",
   "version": "1.0.1",
   "description": "A pure JavaScript, cross-platform module designed for extracting text from PDF files.",
-  "main": "dist/index.js",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "prepublishOnly": "npm run build"
   },
   "author": {
@@ -12,7 +21,6 @@
     "email": "necmi.m.hasan@outlook.de",
     "url": "https://necm1.dev"
   },
-  "type": "module",
   "keywords": [
     "pdf-parse",
     "pdf-crawler",
@@ -43,8 +51,14 @@
   ],
   "homepage": "https://github.com/necm1/pdf-parse",
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.11.27",
     "@types/pdfjs-dist": "^2.10.378",
+    "rollup": "^4.13.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "tslib": "^2.6.2",
     "typescript": "^5.4.2"
   },
   "dependencies": {

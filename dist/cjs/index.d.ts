@@ -54,4 +54,3 @@ export default class PDFParse {
      */
     get file(): PDFDocumentProxy | null;
 }
-//# sourceMappingURL=index.d.ts.map

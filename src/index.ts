@@ -1,11 +1,15 @@
-import {
-  PDFDocumentProxy,
-  PDFPageProxy,
-  getDocument,
-  version,
-} from 'pdfjs-dist';
+import { PDFDocumentProxy, PDFPageProxy } from 'pdfjs-dist';
 import { PDFOptions, PDFReturn, RenderOptions } from './interface';
 import { TextItem, TextMarkedContent } from 'pdfjs-dist/types/src/display/api';
+
+let pdfjsDist;
+
+// Support for CommonJS & ESM
+(async function () {
+  pdfjsDist = await import('pdfjs-dist');
+  const pdfjsWorker = await import('pdfjs-dist/build/pdf.worker.mjs');
+  pdfjsDist.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+})();
 
 /**
  * Represents a PDF parser for extracting text and metadata from PDF files.
@@ -62,11 +66,12 @@ export default class PDFParse {
         info: null,
         metadata: null,
         text: '',
-        version: version,
+        version: pdfjsDist.version,
       };
 
       // Buffer doesn't exist in the browser, so we need to convert it to ArrayBuffer / Uint8Array
-      this._file = await getDocument({ data: new Uint8Array(src) }).promise;
+      this._file = await pdfjsDist.getDocument({ data: new Uint8Array(src) })
+        .promise;
       pdfReturn.totalPages = this._file.numPages;
 
       const metaData = await this._file.getMetadata();

@@ -7,4 +7,3 @@ export interface PDFReturn {
     text: string;
     version: string | null;
 }
-//# sourceMappingURL=pdf-return.interface.d.ts.map
