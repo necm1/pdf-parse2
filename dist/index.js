@@ -1,4 +1,6 @@
-import { getDocument, version, } from 'pdfjs-dist';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const pdfjs_dist_1 = require("pdfjs-dist");
 /**
  * Represents a PDF parser for extracting text and metadata from PDF files.
  * This class provides functionality to load a PDF file, parse its content, and extract
@@ -17,7 +19,7 @@ import { getDocument, version, } from 'pdfjs-dist';
  *
  * @see {@link https://mozilla.github.io/pdf.js/} for pdf.js library.
  */
-export default class PDFParse {
+class PDFParse {
     /**
      * A reference to the loaded PDF document.
      * This property holds the instance of the PDFDocumentProxy returned by pdf.js
@@ -48,10 +50,10 @@ export default class PDFParse {
                 info: null,
                 metadata: null,
                 text: '',
-                version: version,
+                version: pdfjs_dist_1.version,
             };
             // Buffer doesn't exist in the browser, so we need to convert it to ArrayBuffer / Uint8Array
-            this._file = await getDocument({ data: new Uint8Array(src) }).promise;
+            this._file = await (0, pdfjs_dist_1.getDocument)({ data: new Uint8Array(src) }).promise;
             pdfReturn.totalPages = this._file.numPages;
             const metaData = await this._file.getMetadata();
             pdfReturn.info = metaData.info;
@@ -109,4 +111,5 @@ export default class PDFParse {
         return this._file;
     }
 }
+exports.default = PDFParse;
 //# sourceMappingURL=index.js.map
