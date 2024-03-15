@@ -38,9 +38,9 @@
     "server side PDF parsing",
     "pdf metadata"
   ],
-  "repository": "https://github.com/necm1/pdf-parse.git",
+  "repository": "https://github.com/necm1/pdf-parse2.git",
   "bugs": {
-    "url": "https://github.com/necm1/pdf-parse/issues"
+    "url": "https://github.com/necm1/pdf-parse2/issues"
   },
   "license": "MIT",
   "engines": {
